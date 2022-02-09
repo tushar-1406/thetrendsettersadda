@@ -4,7 +4,7 @@ let high=document.getElementById("high");
 let low=document.getElementById("low");
 
  function productDetail(id){
-    var url = "http://localhost:3000/productdetail1";
+    var url = "/productdetail1";
     var data = {productID:id};
     data=JSON.stringify(data);
     var params = {
@@ -23,7 +23,7 @@ let low=document.getElementById("low");
     
 }
 function deleteProduct(id){
-    var url = "http://localhost:3000/deleteProduct";
+    var url = "/deleteProduct";
     var data = {productID:id};
     data=JSON.stringify(data);
     var params = {
@@ -49,7 +49,7 @@ function getProducts(a){
     {
 
         
-        fetch("http://localhost:3000/getProducts").then((response)=>{
+        fetch("/getProducts").then((response)=>{
             return response.text();
         }).then((data)=>{
             let products=JSON.parse(data);
@@ -101,7 +101,7 @@ function getProducts(a){
     else if(a=="sort")
     {
        
-        fetch("http://localhost:3000/getProductsSorted").then((response)=>{
+        fetch("/getProductsSorted").then((response)=>{
             return response.text();
         }).then((data)=>{
             let products=JSON.parse(data);
@@ -153,7 +153,7 @@ function getProducts(a){
     }
     else if (a=="high"){
         
-        fetch("http://localhost:3000/getProductsHigh").then((response)=>{
+        fetch("/getProductsHigh").then((response)=>{
             return response.text();
         }).then((data)=>{
             let products=JSON.parse(data);
@@ -203,7 +203,7 @@ function getProducts(a){
 
     }
     else{
-        fetch("http://localhost:3000/getProductsLow").then((response)=>{
+        fetch("/getProductsLow").then((response)=>{
             return response.text();
         }).then((data)=>{
             let products=JSON.parse(data);

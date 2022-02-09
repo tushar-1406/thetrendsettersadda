@@ -11,7 +11,7 @@ $('.carousel').carousel({
 
 
 function getdetail(){
-    fetch("http://localhost:3000/getclickedproduct").then((response)=>{
+    fetch("/getclickedproduct").then((response)=>{
         return response.text();
     }).then((data)=>{
         let details=JSON.parse(data);

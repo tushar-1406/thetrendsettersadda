@@ -4,7 +4,7 @@ let placeorder = document.getElementById("placeorder");
 let user;
 
 function updatecart(element) {
-  var url = "http://localhost:3000/updatecart";
+  var url = "/updatecart";
   var data = { productID: element.target.id };
   data = JSON.stringify(data);
   var params = {
@@ -22,7 +22,7 @@ function updatecart(element) {
 }
 
 function updatequantity(element) {
-  var url = "http://localhost:3000/updateQuantity";
+  var url = "/updateQuantity";
   var data = { productID: element.target.id, quantity: element.target.value };
   data = JSON.stringify(data);
   var params = {
@@ -39,7 +39,7 @@ function updatequantity(element) {
     });
 }
 function cart() {
-  fetch("http://localhost:3000/getUser")
+  fetch("/getUser")
     .then((response) => {
       return response.json();
     })
@@ -136,7 +136,7 @@ placeorder.addEventListener("click",function(){
   const myTimeout = setTimeout(placed, 3000);
 
   function placed(){
-    fetch("http://localhost:3000/orderplaced")
+    fetch("/orderplaced")
     .then((response) => {
       return response.json();
     })

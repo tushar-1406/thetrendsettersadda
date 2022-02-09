@@ -5,7 +5,7 @@ $('.carousel').carousel({
   let productscontainer=document.getElementById("productscontainer");
 
  function productDetail(id){
-    var url = "http://localhost:3000/productdetail1";
+    var url = "/productdetail1";
     var data = {productID:id};
     data=JSON.stringify(data);
     var params = {
@@ -17,7 +17,7 @@ $('.carousel').carousel({
     }
     fetch(url, params).then(response=> response.json())
     .then((data)=>{
-        window.location.href = "http://localhost:3000/detail";
+        window.location.href = "/detail";
                    
     })
     
@@ -25,7 +25,7 @@ $('.carousel').carousel({
 }
 
 function getProducts(){
-    fetch("http://localhost:3000/getProducts").then((response)=>{
+    fetch("/getProducts").then((response)=>{
         return response.text();
     }).then((data)=>{
         let products=JSON.parse(data)
