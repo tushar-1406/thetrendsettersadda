@@ -1,5 +1,5 @@
 function loggedIn(){
-    fetch("s/loggedIn").then((response)=>{
+    fetch("/loggedIn").then((response)=>{
         return response.text();
     }).then((data)=>{
         if(data==="true")
