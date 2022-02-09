@@ -1,5 +1,5 @@
 function loggedIn(){
-    fetch("http://localhost:3000/loggedIn").then((response)=>{
+    fetch("s/loggedIn").then((response)=>{
         return response.text();
     }).then((data)=>{
         if(data==="true")
@@ -10,6 +10,7 @@ function loggedIn(){
             account.style.display="none";
         }
     })
+
 }
 loggedIn();
 
