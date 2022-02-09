@@ -60,7 +60,7 @@ form .btn1:focus{
     background:grey;
     height:3px;
     margin-top:8px;
-    transform:translateX(100px);
+    transform:translateX(150px);
     transition:transform 1s;
     margin-left:20px;
 }

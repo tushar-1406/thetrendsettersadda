@@ -29,7 +29,7 @@ const admin = require("./middleware/admin");
 const getUser = require("./middleware/getUser");
 const async = require("hbs/lib/async");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
