@@ -1,0 +1,16 @@
+#aboutus{
+    background-color: rgb(238, 234, 234);
+   
+}
+h1{
+    color: black;
+    text-align: center;
+    margin-top: 15vh;  
+}
+hr{
+    width: 10vw;
+    margin: auto;
+    border-top: 0.5vh solid red;
+    border-radius: 100px;
+    margin-bottom: 10vh;
+}

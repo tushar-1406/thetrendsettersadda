@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trendsetter's Adda</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/productDetail.css">
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="container mt-5 mb-5">
+        <div class="row ">
+            <div class="col-sm-5 ml-2">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators" id="ol">
+    
+                    </ol>
+                    <div class="carousel-inner" id="productphotos">
+                        
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 pl-5 ml-3">
+
+                <p class="mt-5" id="category"></p>
+                <p class="mt-5 h1" id="productName"></p>
+                <h6 class="mt-4">₹ <span id="price"></span></h6>
+                <form action="/addtocart" method="POST">
+                <div id="select">
+
+{{!-- 
+                <select required class="form-select border-danger p-2" style="display: none;" id="clothing" aria-label="Default select example" name="size">
+                    <option value="M" selected>Select Size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">Xl</option>
+                    <option value="XL">XXl</option>
+                </select>
+                <select required class="form-select border-danger p-2" id="shoes" style="display: none;" aria-label="Default select example" name="size">
+                    <option value="8" selected>Select Size</option>
+                    <option value="7">7 <span>UK</span></option>
+                    <option value="8">8 <span>UK</span></option>
+                    <option value="9">9 <span>UK</span></option>
+                    <option value="10">10 <span>UK</span></option>
+                    <option value="11">11 <span>UK</span></option>
+                    
+                </select>
+                <select required class="form-select border-danger p-2" style="display: none;" id="accessory" aria-label="Default select example" name="size">
+                    <option value="Free Size" selected>Free Size</option>
+                    
+                </select> --}}
+                </div>
+                <input id="quantity" onkeydown="return false" class="form-control border-danger mt-3" style="width: 8vw;" type="number"
+                    placeholder="Quantity" name="quantity" min="1" max="10" required>
+                <button type="submit" class="mt-4" id="addtocart">Add to Cart ➙</button>
+                </form>
+                <p class="h4 mt-5">Product Description:</p>
+                <p id="description">
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    {{>footer}}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/productDetail.js" type="module"></script>
+</body>
+
+</html>

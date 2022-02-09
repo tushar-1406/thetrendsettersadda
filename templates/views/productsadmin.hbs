@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trendsetter's Adda</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/productsadmin.css">
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 style="display: inline-block; background-color:rgb(250, 249, 248)">All Products</h2>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter"
+                    style="display: inline-block; float:right;" id="addproduct">Add Product</button>
+                <!-- Button trigger modal -->
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Add Product</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/addproduct" method="POST" enctype="multipart/form-data">
+                                    <div class="form-group row">
+                                        <label for="productName" class="col-sm-2 col-form-label">Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" required class="form-control" id="productName"
+                                                placeholder="Product Name" name="productName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="description" class="col-sm-2 col-form-label">Description</label>
+                                        <div class="col-sm-10">
+                                            <textarea class="form-control" id="description" 
+                                                placeholder="Add description" required rows="3" name="description"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="category" class="col-sm-2 col-form-label">Category</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="category"
+                                                placeholder="Add category" required name="category">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="price" class="col-sm-2 col-form-label">Price</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" min="100" value="1000" class="form-control" required id="price"
+                                                placeholder="Add price" name="price"> 
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label>Add Images:</label>
+                                        <input type="file" class="form-control-file mt-1" required name="image1" id="image1" multiple>
+                                        
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-10">
+                                            <button type="submit" class="btn btn-primary">Add</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown mr-5" style="display: inline-block; float:right;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filter
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" id="sort" type="button">Sort By A-Z</button>
+                        <button class="dropdown-item" id="low" type="button">Low Price First</button>
+                        <button class="dropdown-item" id="high" type="button">High Price First</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row mt-5 mb-5" id="productscontainer">
+            {{!-- <div class="col-lg-3 col-sm-6 col-xs-12 mt-4 mb-2" id="product1">
+                <img src="images/blank.png" class="image-fluid" alt="">
+                <p class="mt-2 mb-0">Zara shoes</p>
+                <p class="mt-0 mb-0">₹ 1000</p>
+                <p class="mt-0 mb-0" style="font-size: 2vh;">Free delievery</p>
+                <button class="btn btn-secondary">Edit</button>
+                <button class="btn btn-secondary">Delete</button>
+            </div> --}}
+        </div>
+    </div>
+
+    {{>footer}}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="js/productsadmin.js" type="module"></script>
+</body>
+
+</html>
+{{!-- <button class="btn btn-secondary" id="${products[i]._id}">Edit</button> --}}
+
+
+
+
+

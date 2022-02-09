@@ -1,0 +1,25 @@
+#navbar{
+    background-color: black;
+    max-width: 1300px;
+}
+#navbar li{
+  
+    font-size: 18px;
+   
+}
+#navbar li :hover{
+   
+    font-weight: bold;
+   
+}
+
+#dropdown{
+line-height: 30px;
+background-color: whitesmoke;
+width: 200px;
+}
+
+/* #logout{
+    display: none;
+    
+} */

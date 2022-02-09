@@ -1,0 +1,39 @@
+#heading{
+    margin-top: 4vw;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 4vw;
+}
+span{
+    text-shadow: 1vh;
+}
+p{
+    margin: 0;
+}
+button{
+    border-radius: 30px;
+    border: none;
+    border-color: whitesmoke;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    margin-left: 2vw;
+    background-color: rgb(248, 119, 72);
+    color: whitesmoke;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    transition: 0.4s;
+}
+button:hover{
+    background-color: lightgray;
+    color: black;
+}
+hr{
+    width: 10vw;
+    margin: auto;
+    border-top: 0.5vh solid rgb(145, 134, 134);
+    border-radius: 100px;
+    margin-bottom: 10vh;
+}

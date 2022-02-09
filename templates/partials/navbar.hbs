@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body>
+  <header style="background-color: black;">
+
+
+
+    <div class="container">
+
+      <nav class="navbar navbar-expand-lg  navbar-dark px-5 py-0 " id="navbar">
+        <a class="navbar-brand" href="/">
+          <img src="images/logo.jpg" width="200" height="75" alt="hello">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-5 mt-0 ">
+            <li class="nav-item ">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/products">Products</a>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                More
+              </a>
+              <div class="dropdown-menu " id="dropdown" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item " href="/account" id="account">Account</a>
+                <a class="dropdown-item " href="/contact">Contact us</a>
+                <a class="dropdown-item " href="/about">About</a>
+                <a class="dropdown-item " id="logout" style="display: none;" href="/logout">Logout</a>
+                
+              </div>
+            </li>
+            <li id="cart" class="nav-item ">
+              <a class="nav-link active" href="/cart">Cart</a>
+
+            </li>
+
+
+          </ul>
+
+        </div>
+      </nav>
+
+
+    </div>
+  </header>
+  <script src="js/navbar.js"></script>
+
+
+</body>
+
+  
+</html>

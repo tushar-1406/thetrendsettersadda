@@ -1,0 +1,15 @@
+#addtocart{
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(248, 119, 72);
+    color: whitesmoke;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    transition: 0.4s;
+}
+#addtocart:hover{
+    background-color: lightgray;
+    color: black;
+}

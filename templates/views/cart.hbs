@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Trendsetter's Adda</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="container p-5 my-5" id="outercontainer">
+        <div class="row">
+
+            <div class="col-12 p-3" style="min-height:60vh;background-color:white;">
+                <div class="row">
+                    <p class="h2 ml-3 mt-0 mb-3">Shopping Cart</p>
+                </div>
+                <div class="row">
+                    <div class="small-container cart-page">
+
+                        <table id="maincart">
+
+                            {{!-- <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr> --}}
+
+                            {{!-- <div id="maincart"> --}}
+
+
+                                {{!-- <tr>
+                                    <td>
+                                        <div class="cart-info">
+                                            <img src="images/summer.jpg" alt="">
+                                            <div>
+                                                <p style="margin-bottom:2px;">Zara Chelsea boot</p>
+                                                <small style="font-weight:500;">Price:₹ <span id="price">100</span>
+                                                </small>
+                                                <br>
+                                                <small class="m-0" style="font-weight:500;">Size: <span
+                                                        id="size">M</span> </small>
+                                                <br>
+                                                <a href="" class="m-0 remove" id="">Remove ✘</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><input type="number" value="" min="1" style="width: 50px;"></td>
+                                    <td>₹ &nbsp;<span id="">444</span></td>
+                                </tr> --}}
+                                {{!-- </div> --}}
+                        </table>
+                        <div class="total-price" id="total" style="background-color:lightgrey ;">
+                            <table>
+
+
+                                <tr>
+                                    <td>Total</td>
+                                    <td>₹ &nbsp;<span id="subtotal"></span></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                      <button type="button" class="btn btn-secondary p-1" data-toggle="modal"  data-target="#exampleModalCenter" style="border-radius: 15px;"
+                                            id="placeorder">Place Order</button>
+                                      
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                   
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                        <img src="images/ordered.gif" style="margin: auto; height:300px; width:400px"  alt="">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer" style="margin: auto;">
+                                                        Thank you for Shopping with Us. 🙃
+                                                        <br>
+                                                       
+                                                     
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="total1" style="background-color: lightgray;display:none;">
+                    <div class="row pl-5" id="sad">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    {{>footer}}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
