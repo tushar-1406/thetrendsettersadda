@@ -20,7 +20,7 @@ form a{
     width:100px;
     display:inline-block;
 }
-.form-btn{
+.form-btn1{
     display:inline-block;
 }
 .form-container form{
@@ -39,13 +39,13 @@ form input{
     padding:0 10px;
     border:1px solid #ccc;
 }
-form .btn{
+form .btn1{
     width:100px;
     border:none;
     cursor:pointer;
     margin:10px 0;
 }
-form .btn:focus{
+form .btn1:focus{
     outline:none;
 }
 #LoginForm{
@@ -65,6 +65,6 @@ form .btn:focus{
     margin-left:20px;
 }
 
-.btn:hover{
+.btn1:hover{
     background-color: #ccc;
 }
