@@ -46,12 +46,16 @@ function getProducts(){
         let allproducts=document.querySelectorAll(".products");
         for(var i=0;i<allproducts.length;i++)
         {
-            allproducts[i].addEventListener("click",function(product){     
+            // allproducts[i].addEventListener("click",function(product){     
                 
-                productDetail(product.path[1].id);
+            //     productDetail(product.path[1].id);
                 
                
-            })
+            // })
+            allproducts[i].onclick = function (product) {
+                productDetail(product.path[1].id);
+                
+            }
             
         }
     })
