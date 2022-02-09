@@ -1,6 +1,6 @@
 #heading{
     margin-top: 4vw;
-    font-size: 3vw;
+    
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 4vw;
@@ -31,7 +31,7 @@ button:hover{
     color: black;
 }
 hr{
-    width: 10vw;
+    width: 25vh;
     margin: auto;
     border-top: 0.5vh solid rgb(145, 134, 134);
     border-radius: 100px;
