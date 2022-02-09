@@ -57,4 +57,3 @@ function getProducts(){
     })
 }
 getProducts();
-
