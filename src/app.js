@@ -161,17 +161,20 @@ app.post("/login", admin, async (req, res) => {
     const user = await User.findOne({ email: email });
     const isMatch = await bcrypt.compareSync(password1, user.password);
 
-    const token = await user.generateAuthToken();
-    user.isAdmin = req.isAdmin;
-    await user.save();
+   
 
-    res.cookie("jwt", token);
     if (isMatch) {
+      const token = await user.generateAuthToken();
+      user.isAdmin = req.isAdmin;
+      res.cookie("jwt", token);
+      await user.save();
       res.status(201).render("index", {
         userName: user.name,
       });
     } else {
-      res.send("incorrect email or password");
+      res
+      .status(201)
+      .render("account", { failed: "Incorrect Email or Password" });
     }
   } catch (error) {
     res
