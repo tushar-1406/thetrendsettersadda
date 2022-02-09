@@ -59,7 +59,7 @@ function getProducts(a){
             for(var i=0;i<products.length;i++)
             {
                 html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4" id="${products[i]._id}">
-                <img src="uploads/${products[i].images[0].image}" class="image-fluid products" width="230" height="230" alt="">
+                <img src="uploads/${products[i].images[0].image}" class="image-fluid products" width="230"  style="cursor: pointer;" height="230" alt="">
                 <p class="mt-2 mb-0">${products[i].productName}</p>
                 <p class="mt-0 mb-0">₹ ${products[i].price}</p>
                 <p class="mt-0 mb-0" style="font-size: 2vh;">Free delievery</p>
@@ -111,7 +111,7 @@ function getProducts(a){
             for(var i=0;i<products.length;i++)
             {
                 html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4 " id="${products[i]._id}">
-                <img src="uploads/${products[i].images[0].image}" class="image-fluid products" width="230" height="230" alt="">
+                <img src="uploads/${products[i].images[0].image}"  style="cursor: pointer;" class="image-fluid products" width="230" height="230" alt="">
                 <p class="mt-2 mb-0">${products[i].productName}</p>
                 <p class="mt-0 mb-0">₹ ${products[i].price}</p>
                 <p class="mt-0 mb-0" style="font-size: 2vh;">Free delievery</p>
@@ -163,7 +163,7 @@ function getProducts(a){
             for(var i=0;i<products.length;i++)
             {
                 html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4" id="${products[i]._id}">
-                <img src="uploads/${products[i].images[0].image}" class="image-fluid products" width="230" height="230" alt="">
+                <img src="uploads/${products[i].images[0].image}"  style="cursor: pointer;" class="image-fluid products" width="230" height="230" alt="">
                 <p class="mt-2 mb-0">${products[i].productName}</p>
                 <p class="mt-0 mb-0">₹ ${products[i].price}</p>
                 <p class="mt-0 mb-0" style="font-size: 2vh;">Free delievery</p>
@@ -213,7 +213,7 @@ function getProducts(a){
             for(var i=0;i<products.length;i++)
             {
                 html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4" id="${products[i]._id}">
-                <img src="uploads/${products[i].images[0].image}" class="image-fluid products" width="230" height="230" alt="">
+                <img src="uploads/${products[i].images[0].image}"  style="cursor: pointer;" class="image-fluid products" width="230" height="230" alt="">
                 <p class="mt-2 mb-0">${products[i].productName}</p>
                 <p class="mt-0 mb-0">₹ ${products[i].price}</p>
                 <p class="mt-0 mb-0" style="font-size: 2vh;">Free delievery</p>

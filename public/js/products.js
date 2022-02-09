@@ -37,7 +37,7 @@ function getProducts(a){
             let html=``;
             for(var i=0;i<products.length;i++)
             {
-                html+=`<div class="col-lg-3 col-sm-6 col-xs-12  mt-5 mb-4 products" id="${products[i]._id}">
+                html+=`<div class="col-lg-3 col-sm-6 col-xs-12  mt-5 mb-4 products"  style="cursor: pointer;" id="${products[i]._id}">
                 <img src="uploads/${products[i].images[0].image}" class="image-fluid " width="230" height="230" alt="">
                 <p class="mt-2 mb-0">${products[i].productName}</p>
                 <p class="mt-0 mb-0">₹ ${products[i].price}</p>
@@ -74,7 +74,7 @@ function getProducts(a){
             let html=``;
             for(var i=0;i<products.length;i++)
             {
-                html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4 products" id="${products[i]._id}">
+                html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4 products"  style="cursor: pointer;" id="${products[i]._id}">
                 <img src="uploads/${products[i].images[0].image}" class="image-fluid" width="230" height="230" alt="">
                 <p class="mt-2 mb-0">${products[i].productName}</p>
                 <p class="mt-0 mb-0">₹ ${products[i].price}</p>
@@ -112,7 +112,7 @@ function getProducts(a){
             let html=``;
             for(var i=0;i<products.length;i++)
             {
-                html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4 products" id="${products[i]._id}">
+                html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4 products"  style="cursor: pointer;" id="${products[i]._id}">
                 <img src="uploads/${products[i].images[0].image}" class="image-fluid" width="230" height="230" alt="">
                 <p class="mt-2 mb-0">${products[i].productName}</p>
                 <p class="mt-0 mb-0">₹ ${products[i].price}</p>
@@ -148,7 +148,7 @@ function getProducts(a){
             let html=``;
             for(var i=0;i<products.length;i++)
             {
-                html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4 products" id="${products[i]._id}">
+                html+=`<div class="col-lg-3 col-sm-6 col-xs-12 mt-5 mb-4 products"  style="cursor: pointer;" id="${products[i]._id}">
                 <img src="uploads/${products[i].images[0].image}" class="image-fluid" width="230" height="230" alt="">
                 <p class="mt-2 mb-0">${products[i].productName}</p>
                 <p class="mt-0 mb-0">₹ ${products[i].price}</p>

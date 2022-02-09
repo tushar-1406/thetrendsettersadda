@@ -107,7 +107,7 @@ function cart() {
                   </div>
               </div>
           </td>
-          <td><input type="number" value="${user.cart[i].quantity}" class="updateQuantity" id="${user.cart[i].productId}" min="1" style="width: 50px;"></td>
+          <td><input type="number" value="${user.cart[i].quantity}" class="updateQuantity" id="${user.cart[i].productId}" min="1" style="width: 100px;"></td>
           <td>₹ &nbsp;<span id="">${sum}</span></td>
          </tr>
          `;
