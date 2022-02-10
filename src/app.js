@@ -324,6 +324,9 @@ app.post("/updateQuantity",getUser,async(req,res)=>{
 
 })
 app.post("/updatecart",getUser,async(req,res)=>{
+  // console.log("hello");
+  // console.log(req.body.productID);
+
 
   req.user.cart = req.user.cart.filter((currElement) => {
     return currElement.productId != req.body.productID;

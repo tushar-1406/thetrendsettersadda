@@ -5,7 +5,8 @@ let user;
 
 function updatecart(element) {
   var url = "/updatecart";
-  var data = { productID: element.target.id };
+  id=element.target.id;
+  var data = { productID:id };
   data = JSON.stringify(data);
   var params = {
     method: "post",
@@ -17,6 +18,7 @@ function updatecart(element) {
   fetch(url, params)
     .then((response) => response.json())
     .then((data) => {
+      // console.log("hello");
       window.location.href = "/cart";
     });
 }
@@ -82,7 +84,7 @@ function cart() {
                       <br>
                       <small class="m-0" style="font-weight:500;" >Size: <span id="size">${user.cart[i].productSize}</span> </small>
                       <br>
-                      <a href="" class="m-0 remove" id="${user.cart[i].productId}">Remove ✘</a>
+                      <small class="m-0 remove"  id="${user.cart[i].productId}">Remove ✘</small>
                   </div>
               </div>
           </td>
@@ -125,6 +127,7 @@ function cart() {
       let removes = document.querySelectorAll(".remove");
       for (var i = 0; i < removes.length; i++) {
         removes[i].addEventListener("click", function (element) {
+          // console.log(element);
           updatecart(element);
         });
       }
@@ -141,7 +144,7 @@ placeorder.addEventListener("click",function(){
       return response.json();
     })
     .then((data) => {
-      console.log("hello");
+      // console.log("hello");
       window.location.href="/products";
 
     })

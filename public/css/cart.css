@@ -45,9 +45,10 @@ td input{
     
     
 }
-td a{
+td small{
     color:rgb(65, 65, 65);
     font-size:12px;
+    cursor: pointer;
 }
 
 td img{
